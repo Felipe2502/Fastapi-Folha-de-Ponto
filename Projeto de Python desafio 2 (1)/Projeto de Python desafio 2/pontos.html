@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros de Ponto</title>
+</head>
+<body>
+    <h1>Registros de Ponto</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Funcionário ID</th>
+            <th>Data e Hora</th>
+            <th>Tipo</th>
+        </tr>
+        {% for ponto in pontos %}
+        <tr>
+            <td>{{ ponto.id }}</td>
+            <td>{{ ponto.funcionario_id }}</td>
+            <td>{{ ponto.data_hora }}</td>
+            <td>{{ ponto.tipo }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
